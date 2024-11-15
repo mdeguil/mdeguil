@@ -1,36 +1,20 @@
 <meta http-equiv="refresh" content="0; URL=accueil.php">
 <?php
 
-$filename = '../fichier_csv/contacte.csv';
+    $dbh = new PDO('mysql:host=localhost;dbname=Site_Web_Aunis_Freeware', 'mysql', 'mysql');
 
-$prenom = $_POST['prenom'];
-$nom = $_POST['nom'];
-$email = $_POST['email'];
-$demande = $_POST['demande'];
+    $nom = $_POST['nom'];
+    $prenom = $_POST['prenom'];
+    $email = $_POST['email'];
+    $demande = $_POST['demande'];
 
-if (file_exists($filename)) {
-    $fichier_ajout = fopen($filename, 'a');
-    $list_ajout = array (
-        array($prenom, $nom ,$email ,$demande),
-    );
-    
-    foreach ($list_ajout as $fields) {
-        fputcsv($fichier_ajout, $fields);
-    }
-    fclose($filename);
-   
-} else {
-    $fichier_ouvert = fopen($filename, 'w');
-    $list = array (
-        array('prenom', 'nom', 'email', 'demande'),
-        array($prenom, $nom ,$email ,$demande),
-    );
-    
-    foreach ($list as $fields) {
-        fputcsv($fichier_ouvert, $fields);
-    }
-    fclose($filename);
-    
-}
+    $sql = $dbh-> prepare('INSERT INTO Contacte (nom, prenom, email, demande ) VALUES (:nom, :prenom, :email, :demande)');
+
+    $sql->bindParam(":nom", $nom);
+    $sql->bindParam(":prenom", $prenom);
+    $sql->bindParam(":email", $email);
+    $sql->bindParam(":demande", $demande);
+
+    $sql->execute();
 
 ?>
