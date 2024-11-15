@@ -61,7 +61,7 @@
                 <label for="msg">Votre demmande&nbsp;</label>
             </div>
             <div class="row">
-                <textarea id="demande" name="demande" rows="6" class="mb-2 border rounded"></textarea>
+                <textarea name="demande" rows="6" class="mb-2 border rounded"></textarea>
             </div>
             <div class="row self-end">
                 <div class="col-7"></div>

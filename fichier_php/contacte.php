@@ -1,4 +1,6 @@
-<meta http-equiv="refresh" content="0; URL=accueil.php">
+<meta http-equiv="refresh" content="10; URL=accueil.php">
+<p>Redirection sur la page de d'Accueil !</p>
+
 <?php
 
     $dbh = new PDO('mysql:host=localhost;dbname=Site_Web_Aunis_Freeware', 'mysql', 'mysql');
@@ -15,6 +17,10 @@
     $sql->bindParam(":email", $email);
     $sql->bindParam(":demande", $demande);
 
-    $sql->execute();
+    if ($sql->execute()) {
+        echo "Nouveau enregistrement créé avec succès";
+    } else {
+        echo "Erreur";
+    }
 
 ?>
