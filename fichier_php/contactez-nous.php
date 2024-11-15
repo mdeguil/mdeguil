@@ -40,13 +40,13 @@
                     <label class="col" for="name">Nom&nbsp;</label>
                 </div>
                 <div class="col">
-                    <input class="col-12 border rounded" type="text" id="nom" name="nom" placeholder="Votre nom"/>
+                    <input class="col-12 border rounded" type="text" name="nom" placeholder="Votre nom"/>
                 </div>
                 <div class="col-1">
                     <label class="ligne" for="prenom">Prénom&nbsp;</label>
                 </div>
                 <div class="col">
-                    <input class="col-12 border rounded" type="text" id="prenom" name="prenom" placeholder="Votre prenom"/>
+                    <input class="col-12 border rounded" type="text" name="prenom" placeholder="Votre prenom"/>
                 </div>
             </div>
             <div class="row mb-2">
@@ -54,7 +54,7 @@
                     <label class="col" for="mail">adresse mail&nbsp;</label>
                 </div>
                 <div class="col">
-                    <input class="col-12 border rounded" type="email" id="email" name="email" placeholder="name@example.com"/>
+                    <input class="col-12 border rounded" type="email" name="email" placeholder="name@example.com"/>
                 </div>
             </div>
             <div class="row mb-2">
