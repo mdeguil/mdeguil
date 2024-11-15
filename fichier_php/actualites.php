@@ -34,49 +34,41 @@
         </nav> 
     </header>
     <main class="container px-4"> <!-- Page central -->
-        <br>
-        <div id="carouselExampleCaptions" class="carousel slide">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="../aunis_photos/aix.jpg" class="d-block w-100" alt="aix">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Aix</h5>
-                    </div>
+    <br>
+        <!-- Carouselle dynamique en PHP avec recherche d'image automatique dans un dossier -->
+<div id="carouselExample" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+        <?php
+        $images = scandir('../aunis_photos');
+        $i = 0;
+
+        foreach ($images as $image) {
+            // Ignorer les entrées spéciales '.' et '..' et vérifier que c'est un fichier image
+            if ($image !== '.' && $image !== '..' && preg_match('/\.(jpg|jpeg|png|gif)$/i', $image)) {
+                ?>
+                <div class="carousel-item <?php if ($i == 0) echo 'active'; ?>">
+                    <img src="../aunis_photos/<?php echo $image; ?>" class="d-block w-100" alt="Image <?php echo $i + 1; ?>">
                 </div>
-                <div class="carousel-item">
-                    <img src="../aunis_photos/corderie-royale.jpg" class="d-block w-100" alt="corderie-royale">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Corderie Royale</h5>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="../aunis_photos/fort-boyard.jpg" class="d-block w-100" alt="fort-boyard">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Fort Boyard</h5>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="../aunis_photos/ile-oleron.jpg" class="d-block w-100" alt="ile-oleron">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>ile-oleron</h5>
-                    </div>
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-        </div>
+                <?php
+                $i++;
+            }
+        }
+        ?>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only"></span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only"></span>
+    </a>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 
         <article class="row gx -5">
             <div class="col p-3">
