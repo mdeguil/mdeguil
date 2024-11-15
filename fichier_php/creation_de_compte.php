@@ -20,7 +20,7 @@
                         <a class="nav-link active " href="accueil.php"> Accueil </a>
                     </li>
                     <li class="nav-item"> 
-                        <a class="nav-link active" href="">Nos applications </a>
+                        <a class="nav-link active" href="nos_applications.php">Nos applications </a>
                     </li>
                     <li class="nav-item"> 
                         <a class="nav-link active" href="actualites.php"> Actualités </a>
