@@ -9,15 +9,17 @@ SET NAMES utf8mb4;
 
 DROP TABLE IF EXISTS `admin`;
 CREATE TABLE `admin` (
-  `identifaint` varchar(50) NOT NULL,
-  `Fonction` varchar(1) NOT NULL,
+  `identifiant` varchar(50) NOT NULL,
+  `fonction` varchar(1) NOT NULL,
   `nom` varchar(50) NOT NULL,
   `prenom` varchar(50) NOT NULL,
-  `mail` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
   `mdp` varchar(16) NOT NULL,
-  PRIMARY KEY (`identifaint`)
+  PRIMARY KEY (`identifiant`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+INSERT INTO `admin` (`identifiant`, `fonction`, `nom`, `prenom`, `email`, `mdp`) VALUES
+('admin',	'A',	'Deguil',	'Mateo',	'mateo.deguil@lycee-elie-vinet.org',	'1234');
 
 DROP TABLE IF EXISTS `Contacte`;
 CREATE TABLE `Contacte` (
@@ -30,4 +32,4 @@ CREATE TABLE `Contacte` (
 INSERT INTO `Contacte` (`nom`, `prenom`, `email`, `demande`) VALUES
 ('aa',	'bb',	'cc@dd.ee',	'FF15');
 
--- 2024-11-22 07:01:49
+-- 2024-11-22 09:13:38
