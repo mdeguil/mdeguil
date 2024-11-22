@@ -1,24 +1,32 @@
-<meta http-equiv="refresh" content="0; URL=accueil.php">
+<meta http-equiv="refresh" content="10; URL=connexion.php">
+<p>Redirection sur la page Connexion !</p>
+
 <?php
 
-    $filename = '../fichier_csv/admin.csv';
+    $dbh = new PDO('mysql:host=localhost;dbname=Site_Web_Aunis_Freeware', 'mysql', 'mysql');
 
-    $prenom = $_POST['prenom'];
+    $identifiant = $_POST['identifiant'];
     $nom = $_POST['nom'];
+    $prenom = $_POST['prenom'];
     $email = $_POST['email'];
     $mdp = $_POST['mdp'];
-    $confmdp = $_POST['Confmdp'];
+    $fonction = "V";
 
-    $identifiant = "id";
+    $sql = $dbh-> prepare('INSERT INTO admin (identifiant, fonction, nom, prenom, email, mdp ) VALUES (:identifiant, :fonction, :nom, :prenom, :email, :mdp)');
 
-    $fichier_ajout = fopen($filename, 'a');
-        $list_ajout = array (
-            array($identifiant, $email, $nom, $prenom ,"V", $mdp),
-    );
+    $sql->bindParam(":identifiant", $identifiant);
+    $sql->bindParam(":fonction", $fonction);
+    $sql->bindParam(":nom", $nom);
+    $sql->bindParam(":prenom", $prenom);
+    $sql->bindParam(":email", $email);
+    $sql->bindParam(":mdp", $mdp);
 
-    foreach ($list_ajout as $fields) {
-        fputcsv($fichier_ajout, $fields);
+    echo "slt";
+
+    if ($sql->execute()) {
+        echo "Compte créer avec succes !! ";
+    } else {
+        echo "Erreur";
     }
 
-    fclose($filename);
 ?>
