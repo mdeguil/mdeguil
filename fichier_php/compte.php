@@ -1,10 +1,8 @@
-<meta http-equiv="refresh" content="10; URL=connexion.php">
-<p>Redirection sur la page Connexion !</p>
-
 <?php
 
     $dbh = new PDO('mysql:host=localhost;dbname=Site_Web_Aunis_Freeware', 'mysql', 'mysql');
 
+    // Recuperation de valuers / implémentation
     $identifiant = $_POST['identifiant'];
     $nom = $_POST['nom'];
     $prenom = $_POST['prenom'];
@@ -12,6 +10,8 @@
     $mdp = $_POST['mdp'];
     $fonction = "V";
 
+
+    // Création du compte
     $sql = $dbh-> prepare('INSERT INTO admin (identifiant, fonction, nom, prenom, email, mdp ) VALUES (:identifiant, :fonction, :nom, :prenom, :email, :mdp)');
 
     $sql->bindParam(":identifiant", $identifiant);
@@ -21,10 +21,10 @@
     $sql->bindParam(":email", $email);
     $sql->bindParam(":mdp", $mdp);
 
+    // redirection vers une autre page
     if ($sql->execute()) {
-        echo "Compte créer avec succes !! ";
+        header("Location: connexion.php");
     } else {
-        echo "Erreur";
-    }
-
+        header("Location: creation_de_compte.php");
+    };
 ?>
