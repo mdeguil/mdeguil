@@ -19,14 +19,15 @@ CREATE TABLE `admin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 
-DROP TABLE IF EXISTS `contacte`;
-CREATE TABLE `contacte` (
+DROP TABLE IF EXISTS `Contacte`;
+CREATE TABLE `Contacte` (
   `nom` varchar(50) NOT NULL,
   `prenom` varchar(50) NOT NULL,
-  `mail` varchar(100) NOT NULL,
-  `demande` char(1) NOT NULL,
-  PRIMARY KEY (`nom`,`prenom`)
+  `email` varchar(100) NOT NULL,
+  `demande` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+INSERT INTO `Contacte` (`nom`, `prenom`, `email`, `demande`) VALUES
+('aa',	'bb',	'cc@dd.ee',	'FF15');
 
--- 2024-11-08 08:50:03
+-- 2024-11-22 07:01:49
