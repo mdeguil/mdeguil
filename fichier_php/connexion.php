@@ -77,20 +77,22 @@
                             <h4 class="card-title">Connexion</h4>
                         </div>
                         <div class="card-body">
-                            <p>Identifiant ou adresse email:</p>
-                                <input class="col-12 border rounded" type="text" id="ID/mail" name="ID/mail" placeholder="ID ou mail"/></label>
-                            <br></br>
-                            <p>Mot de passe</p>
-                                <input class="col-12 border rounded" type="text" id="mdp" name="mdp" placeholder="Mot de passe"/>
-                            <br></br>
-                            <div class="text-center">
-                                <div class="btn-group" role="group" aria-label="Basic example">
-                                    <button type="button" class="btn btn-secondary">Annuler</button>
+                            <form action="se_connecter.php" method="post">
+                                <p>Identifiant ou adresse email:</p>
+                                    <input class="col-12 border rounded" type="text" id="ID/mail" name="ID/mail" placeholder="ID ou mail"/></label>
+                                <br></br>
+                                <p>Mot de passe</p>
+                                    <input class="col-12 border rounded" type="password" id="mdp" name="mdp" placeholder="Mot de passe"/>
+                                <br></br>
+                                <div class="text-center">
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <a><button type="button" class="btn btn-secondary">Annuler</button></a>
+                                    </div>
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                    <a id="envoyer" href=""><button class="btn btn-success">Envoyer</button></a>
+                                    </div>
                                 </div>
-                                <div class="btn-group" role="group" aria-label="Basic example">
-                                    <button type="button" class="btn btn-success">Connexion</button>
-                                </div>
-                            </div>
+                            </form>  
                         </div>
                         <div class="card-footer text-center">
                             <a href=""><button class="btn border-secondary text-secondary">Mot de passe oublié</button></a>
