@@ -21,8 +21,6 @@
     $sql->bindParam(":email", $email);
     $sql->bindParam(":mdp", $mdp);
 
-    echo "slt";
-
     if ($sql->execute()) {
         echo "Compte créer avec succes !! ";
     } else {
