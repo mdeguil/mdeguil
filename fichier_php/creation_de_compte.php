@@ -62,6 +62,15 @@
                     <input class="col-12 border rounded" type="email" name="email" placeholder="name@example.com"/>
                 </div>
             </div>
+            <!-- identifiant -->
+            <div class="row mb-2">
+                <div class="col-2">
+                    <label class="col" for="identifiant">identifiant&nbsp;</label>
+                </div>
+                <div class="col">
+                    <input class="col-12 border rounded" type="text" name="identifiant" placeholder="Votre identifiant"/>
+                </div>
+            </div>
             <!-- Mots de Passe -->
             <div class="row mb-2">
                 <div class="col-3">
