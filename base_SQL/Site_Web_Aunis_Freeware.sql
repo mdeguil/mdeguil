@@ -10,7 +10,7 @@ SET NAMES utf8mb4;
 DROP TABLE IF EXISTS `admin`;
 CREATE TABLE `admin` (
   `identifiant` varchar(50) NOT NULL,
-  `fonction` varchar(1) NOT NULL,
+  `Fonction` varchar(1) NOT NULL,
   `nom` varchar(50) NOT NULL,
   `prenom` varchar(50) NOT NULL,
   `email` varchar(100) NOT NULL,
@@ -18,8 +18,18 @@ CREATE TABLE `admin` (
   PRIMARY KEY (`identifiant`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
-INSERT INTO `admin` (`identifiant`, `fonction`, `nom`, `prenom`, `email`, `mdp`) VALUES
-('admin',	'A',	'Deguil',	'Mateo',	'mateo.deguil@lycee-elie-vinet.org',	'1234');
+
+DROP TABLE IF EXISTS `article`;
+CREATE TABLE `article` (
+  `id_article` int(11) NOT NULL AUTO_INCREMENT,
+  `titre` varchar(512) NOT NULL,
+  `auteurs` varchar(512) NOT NULL,
+  `theme` varchar(512) NOT NULL,
+  `date` date NOT NULL,
+  `contenu_article` varchar(10000) NOT NULL,
+  PRIMARY KEY (`id_article`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
 
 DROP TABLE IF EXISTS `Contacte`;
 CREATE TABLE `Contacte` (
@@ -30,6 +40,8 @@ CREATE TABLE `Contacte` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 INSERT INTO `Contacte` (`nom`, `prenom`, `email`, `demande`) VALUES
-('aa',	'bb',	'cc@dd.ee',	'FF15');
+('dqzds',	'qzdqs',	'ddd@gmail.com',	'zqdsgsdg'),
+('wsfeqsef',	'ef<sfe<sef',	'sfsef@gmail.com',	'zegbusdgfyhusdrg'),
+('wsfeqsefqdsdqsdqsdqsd',	'ef<sfe<sefddddddd',	'sfdqzdqsdqsdqsdqsef@gmail.com',	'zegbusdgfyhusdrgssssssssssssssssssssssssss');
 
--- 2024-11-22 09:13:38
+-- 2024-11-29 10:46:14
