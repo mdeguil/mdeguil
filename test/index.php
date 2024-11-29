@@ -146,3 +146,74 @@
     </footer>   
 </body>
 </html>
+
+
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<select class="form-select" id="applicationSelect" size="5" aria-label="Applications disponibles">
+    <option value="npp.zip">Notepad++ (npp.zip)</option>
+    <option value="putty-installer.msi">PuTTY Installer (putty-installer.msi)</option>
+    <option value="ip-calculator.msi">IP Calculator (ip-calculator.msi)</option>
+    <option value="7z-linux.tar.xz">7-Zip Linux (7z-linux.tar.xz)</option>
+    <option value="7z-windows.exe">7-Zip Windows (7z-windows.exe)</option>
+
+
+    <?php
+// Chemin vers le dossier contenant les applications
+$directory = '../aunis_applications';
+
+// Vérifier si le dossier existe
+if (is_dir($directory)) {
+    // Scanner les fichiers dans le dossier
+    $files = scandir($directory);
+
+    // Filtrer les fichiers valides (ignorer . et ..)
+    $applications = array_filter($files, function ($file) use ($directory) {
+        return is_file($directory . DIRECTORY_SEPARATOR . $file);
+    });
+} else {
+    $applications = [];
+}
+?>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aunis Applications</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container mt-4">
+    <div class="card">
+      <div class="card-header text-center text-primary">
+        <strong>Aunis Applications</strong>
+      </div>
+      <div class="card-body">
+        <form id="downloadForm">
+          <div class="mb-3">
+            <select class="form-select" id="applicationSelect" aria-label="Applications disponibles">
+              <?php if (!empty($applications)): ?>
+                <?php foreach ($applications as $application): ?>
+                  <option value="<?= $application ?>"><?= $application ?></option>
+                <?php endforeach; ?>
+              <?php else: ?>
+                <option disabled>Aucune application disponible</option>
+              <?php endif; ?>
+            </select>
+          </div>
+          <div class="d-flex justify-content-end">
+            <button type="button" class="btn btn-success" id="downloadButton">Télécharger</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <select class="form-select" id="applicationSelect" size="5" aria-label="Applications disponibles">
+
+  <?php if (!empty($applications)): ?>
+  <?php else: ?>
+                <option disabled>Aucune application disponible</option>
+              <?php endif; ?>

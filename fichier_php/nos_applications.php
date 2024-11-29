@@ -72,12 +72,15 @@
       <div class="card-body">
         <form id="downloadForm">
           <div class="mb-3">
-            <select class="form-select" id="applicationSelect" size="5" aria-label="Applications disponibles">
-              <option value="npp.zip">Notepad++ (npp.zip)</option>
-              <option value="putty-installer.msi">PuTTY Installer (putty-installer.msi)</option>
-              <option value="ip-calculator.msi">IP Calculator (ip-calculator.msi)</option>
-              <option value="7z-linux.tar.xz">7-Zip Linux (7z-linux.tar.xz)</option>
-              <option value="7z-windows.exe">7-Zip Windows (7z-windows.exe)</option>
+          <select class="form-select" id="applicationSelect" size="5" aria-label="Applications disponibles">
+            <?php $applications = scandir('../aunis_applications'); $i = 0;
+                foreach ($applications as $application) { 
+                if ($application !== '.' && $application !== '..') { ?>
+                  <option value="<?= $application ?>"><?= $application ?> </option>
+                <?php
+                }
+            }
+            ?>
             </select>
           </div>
           <div class="d-flex justify-content-end">
