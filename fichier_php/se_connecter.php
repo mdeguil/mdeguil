@@ -5,11 +5,13 @@ $dbh = new PDO('mysql:host=localhost;dbname=Site_Web_Aunis_Freeware', 'mysql', '
 $identification = $_POST['ID/email'];
 $mdp = $_POST['mdp'];
 
-echo $identification;
-echo $mdp;
+$req = ('SELECT COUNT(*) FROM admin WHERE identifiant LIKE :identification OR email LIKE  :identification');
+$res = $dbh->prepare($req);
 
-$sql_ID = $dbh-> prepare('SELECT  ');
-$sql_mdp = $dbh-> prepare('SELECT mdp FROM admin WHERE mdp = $mdp');
-
-
+if ($res->execute(['identification' => $identification]) = 1) {
+    echo "Compte existant !";
+} else {
+    echo "Compte inexistant !";
+} 
+   
 ?>
