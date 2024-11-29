@@ -63,15 +63,51 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only"></span>
     </a>
-</div>
+</div><br>
+<div class="container mt-4">
+    <div class="card">
+      <div class="card-header text-center text-primary">
+        <strong>Aunis Applications</strong>
+      </div>
+      <div class="card-body">
+        <form id="downloadForm">
+          <div class="mb-3">
+            <select class="form-select" id="applicationSelect" size="5" aria-label="Applications disponibles">
+              <option value="npp.zip">Notepad++ (npp.zip)</option>
+              <option value="putty-installer.msi">PuTTY Installer (putty-installer.msi)</option>
+              <option value="ip-calculator.msi">IP Calculator (ip-calculator.msi)</option>
+              <option value="7z-linux.tar.xz">7-Zip Linux (7z-linux.tar.xz)</option>
+              <option value="7z-windows.exe">7-Zip Windows (7z-windows.exe)</option>
+            </select>
+          </div>
+          <div class="d-flex justify-content-end">
+            <button type="button" class="btn btn-success" id="downloadButton">Télécharger</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div><br>
 
+  <script>
+    document.getElementById('downloadButton').addEventListener('click', function () {
+      // Récupérer l'application sélectionnée
+      const applicationSelect = document.getElementById('applicationSelect');
+      const selectedFile = applicationSelect.value;
+
+      // Créer un lien de téléchargement dynamique
+      const downloadLink = document.createElement('a');
+      // Chemin mis à jour pour correspondre à votre structure de dossier
+      downloadLink.href = `../aunis_applications/${selectedFile}`;
+      downloadLink.download = selectedFile;
+
+      // Déclencher le téléchargement
+      downloadLink.click();
+    });
+  </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-        </div>  
-        
-        <br>
 
     </main>
     <footer class="footer"> <!-- Pied de page -->
