@@ -37,66 +37,41 @@
     </header>
     <br>
     <main class="container px-4">
-    <form action="compte.php" method="post">
-            <!-- Nom / Prenom -->
+    <form action="blog.php" method="post">
+            <!-- titre -->
             <div class="row mb-2">
                 <div class="col-1">
-                   <label class="col" for="name">Nom&nbsp;</label>
+                   <label class="col" for="name">titre&nbsp;</label>
                 </div>
                 <div class="col">
-                    <input class="col-12 border rounded" type="text" id="nom" name="nom" placeholder="Votre nom"/>
+                    <input class="col-12 border rounded" type="text" name="titre" placeholder="titre de l'article"/>
                 </div>
+            </div>
+            <!-- auteurs -->
+            <div class="row mb-2">
+                <div class="col-2">
+                    <label class="ligne" for="auteurs">auteurs&nbsp;</label>
+                </div>
+                <div class="col">
+                    <input class="col-12 border rounded" type="text" name="auteurs" placeholder="nom des différents contributeurs"/>
+                </div>
+            </div>
+            <!-- Theme -->
+            <div class="row mb-2">
                 <div class="col-1">
-                    <label class="ligne" for="prenom">Prénom&nbsp;</label>
+                    <label class="col" for="theme">theme&nbsp;</label>
                 </div>
                 <div class="col">
-                    <input class="col-12 border rounded" type="text" name="prenom" placeholder="Votre prenom"/>
+                    <input class="col-12 border rounded" type="text" name="thème" placeholder="différent thème"/>
                 </div>
             </div>
-            <!-- Adresse mail -->
-            <div class="row mb-2">
-                <div class="col-2">
-                    <label class="col" for="mail">adresse mail&nbsp;</label>
-                </div>
-                <div class="col">
-                    <input class="col-12 border rounded" type="email" name="email" placeholder="name@example.com"/>
-                </div>
-            </div>
-            <!-- identifiant -->
-            <div class="row mb-2">
-                <div class="col-2">
-                    <label class="col" for="identifiant">identifiant&nbsp;</label>
-                </div>
-                <div class="col">
-                    <input class="col-12 border rounded" type="text" name="identifiant" placeholder="Votre identifiant"/>
-                </div>
-            </div>
-            <!-- Mots de Passe -->
+            <!-- Contenu de l'article -->
             <div class="row mb-2">
                 <div class="col-3">
-                    <label class="col" for="mdp">Mot de passe &nbsp;</label>
+                    <label class="col" for="article">contenu_article&nbsp;</label>
                 </div>
                 <div class="col">
-                    <input class="col-12 border rounded" type="password" name="mdp" placeholder="Entrer votre mot de passe"/>
-                </div>
-            </div>
-            <!-- Conf Mots de Passe -->
-            <div class="row mb-2">
-                <div class="col-3">
-                    <label class="col" for="mail">Confirmation du mot de passe &nbsp;</label>
-                </div>
-                <div class="col">
-                    <input class="col-12 border rounded" type="password" name="Confmdp" placeholder="Entrer votre mot de passe"/>
-                </div>
-            </div>
-            <br>
-            <div class="row self-end">
-                <div class="col-7"></div>
-                <div class="col">
-                    <a id="annuler" href=""><button id="BtAnnuler" class=" col-6 btn border-secondary btn-secondary text-light">Annuler</button></a>
-                </div>
-                <div class="col">
-                    <a id="envoyer" href=""><button class=" col-6 btn border-primary btn-primary text-light">Envoyer</button></a>
+                    <input class="col-12 border rounded" type="text" name="contenu_article" placeholder="ceci est mon article"/>
                 </div>
             </div>
         </form> 
