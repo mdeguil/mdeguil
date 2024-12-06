@@ -1,34 +1,5 @@
 <?php
     session_start();
-
-    if ($_SESSION['fct'] === 'A') {
-        # navbar admin ajout de gestion qui comporte : blog / applications / compte en plus des ajout de membres 
-    } elseif ($_SESSION['fct'] === 'M') {
-        # navbar membre ajout contact en plus de l'ajout pour visiteur 
-    } elseif ($_SESSION['fct'] === 'V') {
-        # navbar visiteur changer connexion par deconnexion             
-    } else {
-        # navbar utilisateur non connecter
-        echo '<ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link active " href="accueil.php"> Accueil </a>
-                </li>
-                <li class="nav-item"> 
-                    <a class="nav-link active" href="nos_applications.php">Nos applications </a>
-                </li>
-                <li class="nav-item"> 
-                    <a class="nav-link active" href="actualites.php"> Actualités </a>
-                </li>
-                <li class="nav-item"> 
-                    <a class="nav-link active" href="">Blog </a>
-                </li>
-                <li class="nav-item"> 
-                    <a class="nav-link active" href="connexion.php">Connexion </a>
-                </li>
-            </ul>';
-        
-    }
-
 ?>
 
 <!DOCTYPE html>
@@ -60,10 +31,17 @@
                     <li class="nav-item"> 
                         <a class="nav-link active" href="">Blog </a>
                     </li>
+                    <?php
+                        if ($_SESSION['fct'] === 'M' || 'A'){
+                            echo '<li class="nav-item"> ';
+                                echo '<a class="nav-link active" href="">Contact </a>';
+                            echo '</li>';
+                        }
+                    ?>
                     <li class="nav-item">
                         <?php 
                             if ($_SESSION['fct'] === 'V' || 'M' || 'A'){
-                                echo '<a class="nav-link active" href="connexion.php">Déconnexion </a>';
+                                echo '<a class="nav-link active" href="deconnexion.php">Déconnexion </a>';
                             } else {
                                 echo '<a class="nav-link active" href="connexion.php">Connexion </a> ';
                             }
