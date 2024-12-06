@@ -24,9 +24,6 @@ $_SESSION["nom"]= $resultat_global['nom'] . " " . $resultat_global['prenom'];
 # Recupération la fonction 
 $_SESSION["fct"]= $resultat_global['fonction'];
 
-echo $resultat_global['fonction'];
-
-
 # Recherche de compte existant
 $req = ('SELECT COUNT(*) FROM admin WHERE mdp = :mdp AND identifiant LIKE :identification OR email LIKE :identification;');   
 $res = $dbh->prepare($req);
