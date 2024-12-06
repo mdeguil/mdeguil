@@ -1,5 +1,8 @@
 <?php
 
+session_start();
+$_SESSION["nom"]="Deguil Matéo";
+
 $dbh = new PDO('mysql:host=localhost;dbname=Site_Web_Aunis_Freeware', 'mysql', 'mysql');
 
 $identification = $_POST['identification'];
