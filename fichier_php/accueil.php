@@ -1,5 +1,16 @@
 <?php
     session_start();
+
+    if ($_SESSION['fct'] === 'A') {
+        # navbar admin ajout de gestion qui comporte : blog / applications / compte en plus des ajout de membres 
+    } elseif ($_SESSION['fct'] === 'M') {
+        # navbar membre ajout contact en plus de l'ajout pour visiteur 
+    } elseif ($_SESSION['fct'] === 'V') {
+        # navbar visiteur changer connexion par deconnexion
+    } else {
+        # navbar utilisateur non connecter
+    }
+
 ?>
 
 <!DOCTYPE html>
