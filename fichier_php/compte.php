@@ -23,7 +23,7 @@
 
     // redirection vers une autre page
     if ($sql->execute()) {
-        header("Location: connexion.php");
+        header("Location: accueil.php");
     } else {
         header("Location: creation_de_compte.php");
     };
