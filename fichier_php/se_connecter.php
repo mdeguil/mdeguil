@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-$_SESSION["nom"]="Deguil Matéo";
+$_SESSION["nom"]="Nom Prenom";
 
 $dbh = new PDO('mysql:host=localhost;dbname=Site_Web_Aunis_Freeware', 'mysql', 'mysql');
 

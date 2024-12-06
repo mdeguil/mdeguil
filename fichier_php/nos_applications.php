@@ -19,6 +19,7 @@
         <nav class="navbar navbar-expand-sm bg-success navbar-dark">
             <div class="container-fluid">
                 <img src="../img/logo_af_2.jpeg" alt="Logo d'accueil" style="width:50px;" class="rounded-pill">
+                <?php echo $_SESSION["nom"]; ?>
                 <!-- barre de navigation sur le site -->
                 <ul class="navbar-nav">
                     <li class="nav-item">
