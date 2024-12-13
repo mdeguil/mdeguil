@@ -8,6 +8,7 @@
     $prenom = $_POST['prenom'];
     $email = $_POST['email'];
     $mdp = $_POST['mdp'];
+    $mdp = hash("sha256", $mdp);
     $fonction = "V";
 
 

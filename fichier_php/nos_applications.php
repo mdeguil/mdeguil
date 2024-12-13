@@ -91,9 +91,27 @@
             ?>
             </select>
           </div>
-          <div class="d-flex justify-content-end">
-            <button type="button" class="btn btn-success" id="downloadButton">Télécharger</button>
-          </div>
+          <?php
+                if (($_SESSION['fct'] === 'A')){
+                    echo '<div class="d-flex justify-content-end">';
+                    echo '<button type="button" class="btn btn-success" id="downloadButton">Télécharger</button>';
+                    echo '<a id="envoyer" href="historique.html"><button class=" btn border-danger btn-danger text-light">Historique</button></a>';
+                    echo '</div>';
+                }
+            ?>
+
+            <?php 
+                if (($_SESSION['fct'] === 'V') or ($_SESSION['fct'] === 'M')){
+                    echo '<div class="d-flex justify-content-end">';
+                    echo '<button type="button" class="btn btn-success" id="downloadButton">Télécharger</button>';
+                    echo '</div>';
+                }
+            ?> 
+        
+            <?php
+                if (($_SESSION['fct'] === NULL))
+                echo '<h4>veuillez vous connectez ou créer un compte pour télécharger les logiciels</h4>';
+            ?>
         </form>
       </div>
     </div>
