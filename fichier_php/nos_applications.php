@@ -42,7 +42,7 @@
                                 echo '<div class="dropdown-menu" aria-labelledby="dropdownMenu2">';
                                     echo '<a href="blog.php"<button class="dropdown-item" type="button">Blog</button></a>';
                                     echo '<a href="nos_applications.php"<button class="dropdown-item" type="button">Applications</button></a>';
-                                    echo '<a href="page_contact.php<button class="dropdown-item" type="button">Comptes</button></a>';
+                                    echo '<a href="page_contact.php"<button class="dropdown-item" type="button">Comptes</button></a>';
                                 echo '</div>';
                             echo '</div>';
                         }
