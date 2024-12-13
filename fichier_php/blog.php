@@ -1,7 +1,5 @@
 <?php
     session_start();
-
-   
 ?>
 
 <!DOCTYPE html>
@@ -15,26 +13,56 @@
 </head>
 <body class="container">
     <header> <!-- Entête -->
-        <nav class="navbar navbar-expand-sm bg-success navbar-dark">
+    <nav class="navbar navbar-expand-sm bg-success navbar-dark">
             <div class="container-fluid">
                 <img src="../img/logo_af_2.jpeg" alt="Logo d'accueil" style="width:50px;" class="rounded-pill">
                 <?php echo $_SESSION["nom"]; ?>
                 <!-- barre de navigation sur le site -->
                 <ul class="navbar-nav">
+
                     <li class="nav-item">
                         <a class="nav-link active " href="accueil.php"> Accueil </a>
                     </li>
                     <li class="nav-item"> 
-                        <a class="nav-link active" href="nos_applications.php">Nos applications </a>
-                    </li>
-                    <li class="nav-item"> 
                         <a class="nav-link active" href="actualites.php"> Actualités </a>
                     </li>
-                    <li class="nav-item"> 
-                        <a class="nav-link active" href="">Blog </a>
+
+                    <?php
+                        if( $_SESSION['fct'] !== 'A' ){
+                            echo '<li class="nav-item">';
+                                echo '<a class="nav-link active" href="nos_applications.php">Nos applications </a>';
+                            echo '</li>';
+                            echo '<li class="nav-item">';
+                                echo '<a class="nav-link active" href="">Blog </a>';
+                            echo '</li>';
+                        }else{
+                            echo '<div class="dropdown">';
+                                echo '<button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Gestion </button>';
+                                echo '<div class="dropdown-menu" aria-labelledby="dropdownMenu2">';
+                                    echo '<button class="dropdown-item" type="button">Blog</button>';
+                                    echo '<button class="dropdown-item" type="button">Applications</button>';
+                                    echo '<button class="dropdown-item" type="button">Comptes</button>';
+                                echo '</div>';
+                            echo '</div>';
+                        }
+                    ?>
+                        
                     </li>
-                    <li class="nav-item"> 
-                        <a class="nav-link active" href="connexion.php">Connexion </a>
+                    <?php
+                        if ($_SESSION['fct'] !== NULL && $_SESSION['fct'] !== 'V' ){
+                            echo '<li class="nav-item"> ';
+                                echo '<a class="nav-link active" href="">Contact </a>';
+                            echo '</li>';
+                        }
+                    ?>
+                    <li class="nav-item">
+                        <?php 
+                            if( $_SESSION['fct'] !== NULL){
+                                echo '<a class="nav-link active" href="deconnexion.php">Déconnexion </a>';
+                            } else {
+                                echo '<a class="nav-link active" href="connexion.php">Connexion </a> ';
+                            }
+                        ?> 
                     </li>
                 </ul>
             </div>

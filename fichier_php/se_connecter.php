@@ -1,7 +1,6 @@
 <?php
 
 session_start();
-# $_SESSION["nom"]="Nom Prenom";
 
 $dbh = new PDO('mysql:host=localhost;dbname=Site_Web_Aunis_Freeware', 'mysql', 'mysql');
 
@@ -36,8 +35,7 @@ $resultat = $res->fetchColumn() > 0;
 # Connexion au site en fonction des parametre 
 
 if ($resultat) {
-    echo "Connexion reussi.";
-    echo '<meta http-equiv="refresh" content="3; URL=accueil.php">';   
+    echo '<meta http-equiv="refresh" content="0; URL=accueil.php">';   
 } else {
     echo "Identifiant incorrecte ou mot de passe incorrecte !";
     echo '<meta http-equiv="refresh" content="3; URL=connexion.php">';
