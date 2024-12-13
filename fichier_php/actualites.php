@@ -39,9 +39,9 @@
                             echo '<div class="dropdown">';
                                 echo '<button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Gestion </button>';
                                 echo '<div class="dropdown-menu" aria-labelledby="dropdownMenu2">';
-                                    echo '<button class="dropdown-item" type="button">Blog</button>';
-                                    echo '<button class="dropdown-item" type="button">Applications</button>';
-                                    echo '<button class="dropdown-item" type="button">Comptes</button>';
+                                    echo '<a href="blog.php"<button class="dropdown-item" type="button">Blog</button></a>';
+                                    echo '<a href="nos_applications.php"<button class="dropdown-item" type="button">Applications</button></a>';
+                                    echo '<a href="page_contact.php<button class="dropdown-item" type="button">Comptes</button></a>';
                                 echo '</div>';
                             echo '</div>';
                         }
