@@ -16,17 +16,9 @@
     <main class="container px-4"> <!-- Page central -->
 
         <?php
-        $dsn = 'mysql:host=localhost;dbname=Site_Web_Aunis_Freeware';
-        $user = 'mysql';
-        $pass = 'mysql';
+        include 'connexionBDD.php';
 
-        try {
-        $pdo = new PDO($dsn, $user, $pass);
-        } catch (PDOException $e) {
-        die('Erreur de connexion à la base de données : ' . $e->getMessage());
-        }
-
-        $reponse = $pdo->query('SELECT * FROM Contacte');
+        $reponse = $dbh->query('SELECT * FROM Contacte');
 
         echo '<br><h1>Demandes des utilisateurs</h1><br>';
 

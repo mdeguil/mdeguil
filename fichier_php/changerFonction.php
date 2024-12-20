@@ -2,7 +2,7 @@
 
 session_start();
 
-$dbh = new PDO('mysql:host=localhost;dbname=Site_Web_Aunis_Freeware', 'mysql', 'mysql');
+include 'connexionBDD.php';
 
 $fonction = $_POST['fonction'];
 $identifiant = $_POST['identifiant'];

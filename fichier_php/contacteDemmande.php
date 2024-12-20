@@ -2,7 +2,7 @@
 
 <?php
 
-    $dbh = new PDO('mysql:host=localhost;dbname=Site_Web_Aunis_Freeware', 'mysql', 'mysql');
+    include 'connexionBDD.php';
 
     $nom = $_POST['nom'];
     $prenom = $_POST['prenom'];

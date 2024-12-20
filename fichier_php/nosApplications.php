@@ -33,7 +33,7 @@
                             </select>
                         </div>
                         <?php
-                            if ((isset($_SESSION['fct']) === 'A')){
+                            if ((isset($_SESSION['fct']) && $_SESSION['fct'] === 'A')){
                                 echo '<div class="d-flex justify-content-end">';
                                 echo '<button type="button" class="btn btn-success" id="downloadButton">Télécharger</button>';
                                 echo '<a href="historique.php"<button class="btn btn-danger" type="button">Historique</button></a>';

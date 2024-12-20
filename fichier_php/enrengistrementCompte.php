@@ -31,7 +31,7 @@
         return $choix;
     }
 
-    $dbh = new PDO('mysql:host=localhost;dbname=Site_Web_Aunis_Freeware', 'mysql', 'mysql');
+    include 'connexionBDD.php';
 
     $identifiant = $_POST['identifiant'];
     $nom = $_POST['nom'];
