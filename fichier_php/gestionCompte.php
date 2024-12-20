@@ -11,11 +11,25 @@
 </head>
 <body class="container">
     <?php include 'entete.php';?>  
-    <main class="container px-4"> 
-        <?php include 'carouselle.php';?> 
+    <main class="container"> 
         <br>
-        <h1 class="text-center"> En construction gestion de compte </h1>   
+        <h1 class="text-center">Gestion des comptes</h1>
         <br>
+        <b><p>Entrer l'identifiant de la personne puis sa nouvelle fonction afin de la changer !</p></b>
+        <a href=""> Voir tout les comptes ! </a>
+        <br><br>
+        <form action="" metthod="POST">
+           <label for="identifiant">Identifiant :</label> 
+           <br>
+           <input class="rounded" type="text" name="id">
+           <br><br>
+           <label for="identifiant">Fonction :</label> 
+           <br>
+           <input class="rounded" type="text" name="fct">
+           <br><br>
+           <button class="btn border-black bg-secondary submit text-white"> Changer </button>
+           <br><br>
+        </form>
         
     </main>
     <?php include 'piedDePage.php';?>
