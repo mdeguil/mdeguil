@@ -14,7 +14,7 @@
     <main class="container m-2">
         <h1 class="border rounded border-success bg-success text-light text-center">Formulaire de contact</h1>
 
-        <form action="contacte.php" method="post">
+        <form action="contacteDemmande.php" method="post">
             <div class="row mb-2">
                 <div class="col-1">
                     <label class="col" for="name">Nom&nbsp;</label>

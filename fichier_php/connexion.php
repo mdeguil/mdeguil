@@ -38,7 +38,7 @@
                         </div>
                         <div class="card-footer text-center">
                             <a href=""><button class="btn border-secondary text-secondary">Mot de passe oublié</button></a>
-                            <a href="creation_de_compte.php"><button class="btn border-success text-secondary">Création de compte</button></a>
+                            <a href="creationDeCompte.php"><button class="btn border-success text-secondary">Création de compte</button></a>
                         </div>
                     </div>
                 </div>

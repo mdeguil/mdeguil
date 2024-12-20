@@ -13,7 +13,7 @@
     <?php include 'entete.php';?> 
     <main class="container px-4">
         <br>
-        <form action="compte.php" method="post">
+        <form action="enrengistrementCompte.php" method="post">
             <!-- Nom / Prenom -->
             <div class="row mb-2">
                 <div class="col-1">

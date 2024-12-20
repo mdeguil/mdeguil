@@ -14,7 +14,7 @@
     <main class="container px-4"> 
         <?php include 'carouselle.php';?> 
         <br>
-        <h1 class="text-center"> En construction </h1>   
+        <h1 class="text-center"> En construction gestion de compte </h1>   
         <br>
         
     </main>

@@ -1,4 +1,4 @@
-<header> <!-- Entête -->
+<header> <!-- Entête -->   
     <nav class="navbar navbar-expand-sm bg-success navbar-dark">
         <div class="container-fluid">
             <img src="../img/logo_af_2.jpeg" alt="Logo d'accueil" style="width:50px;" class="rounded-pill">
@@ -25,7 +25,7 @@
                             echo '<button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Gestion </button>';
                             echo '<div class="dropdown-menu" aria-labelledby="dropdownMenu2">';
                                 echo '<a href="blog.php"<button class="dropdown-item" type="button">Blog</button></a>';
-                                echo '<a href="nos_applications.php"<button class="dropdown-item" type="button">Applications</button></a>';
+                                echo '<a href="nos_applications.php"<button class="dropdown-item" type="button">Nos applications</button></a>';
                                 echo '<a href="gestion_compte.php"<button class="dropdown-item" type="button">Comptes</button></a>';
                             echo '</div>';
                         echo '</div>';
@@ -43,7 +43,7 @@
                 <?php
                     if (isset($_SESSION['fct']) && $_SESSION['fct'] !== 'V' ){
                         echo '<li class="nav-item"> ';
-                            echo '<a class="nav-link active" href="page_contact.php">Contact </a>';
+                            echo '<a class="nav-link active" href="contactAffichage.php">Contact </a>';
                         echo '</li>';
                     }
                 ?>
