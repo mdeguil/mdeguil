@@ -14,14 +14,17 @@ CREATE TABLE `admin` (
   `nom` varchar(50) NOT NULL,
   `prenom` varchar(50) NOT NULL,
   `email` varchar(100) NOT NULL,
-  `mdp` varchar(16) NOT NULL,
+  `mdp` varchar(150) NOT NULL,
   PRIMARY KEY (`identifiant`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 INSERT INTO `admin` (`identifiant`, `fonction`, `nom`, `prenom`, `email`, `mdp`) VALUES
 ('admin',	'A',	'Deguil',	'Mateo',	'mateo.deguil@lycee-elie-vinet.org',	'1234'),
-('mbrillant',	'M',	'Brillant',	'Mathéo',	'matheo.brillant@lycee-elie-vinet.org',	'1234'),
-('mdeguil',	'V',	'Deguil',	'Mateo',	'deguil.mateo@gmail.com',	'1234');
+('mbrillant',	'A',	'Brillant',	'Mathéo',	'matheo.brillant@lycee-elie-vinet.org',	'1234'),
+('mdeguil',	'V',	'Deguil',	'Mateo',	'deguil.mateo@gmail.com',	'1234'),
+('modo',	'M',	'modo',	'modo',	'modo@gmail.com',	'modo'),
+('test',	'V',	'test',	'test',	'test@email.test',	'9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08'),
+('testc',	'V',	'testc',	'testc',	'testc@gmail.com',	'c28a08a1a507d5c8ce1a24a6544850290d534e8da2ba92d04025a8dd199e3cd5');
 
 DROP TABLE IF EXISTS `Contacte`;
 CREATE TABLE `Contacte` (
@@ -32,4 +35,4 @@ CREATE TABLE `Contacte` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 
--- 2024-12-06 10:00:31
+-- 2024-12-20 07:35:14
