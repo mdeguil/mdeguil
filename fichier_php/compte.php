@@ -15,11 +15,13 @@
                 }
                 elseif ($lettre>='0' && $lettre<='9'){
                     $chiffre = 1;
+                }else {
+                    $caracterespecial = 1;
                 }
             }
 
-            $force = $minuscule + $majuscule + $chiffre;
-            if ($force < 3){
+            $force = $minuscule + $majuscule + $chiffre + $caracterespecial;
+            if ($force != 4){
                 $choix = "FALSE";
             }else{
                 $choix = "TRUE";
@@ -45,13 +47,12 @@
     $res->execute();
     $resultat = $res->fetchColumn() > 0;
 
-    $verif = testMotDePasse($mdp);
-    echo $verif;    
+    $verif = testMotDePasse($mdp);    
 
 
     if ( $verif === "FALSE"){
         echo "Le mot de passe n'est pas assez fort !! ";
-        echo '<meta http-equiv="refresh" content="6; URL=creation_de_compte.php">';
+        echo '<meta http-equiv="refresh" content="5; URL=creation_de_compte.php">';
     }elseif ($mdp !== $confmdp){
         echo "Les mots de passe ne correspondent pas !! ";
         echo '<meta http-equiv="refresh" content="5; URL=creation_de_compte.php">';
