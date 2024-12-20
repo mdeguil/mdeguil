@@ -50,7 +50,7 @@
                         ?> 
                     
                         <?php
-                            if ((isset($_SESSION['fct']) === NULL))
+                            if ((!isset($_SESSION['fct'])))
                             echo '<h4>veuillez vous connectez ou créer un compte pour télécharger les logiciels</h4>';
                         ?>
                     </form>
