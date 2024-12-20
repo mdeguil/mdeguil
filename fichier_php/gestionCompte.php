@@ -18,14 +18,14 @@
         <b><p>Entrer l'identifiant de la personne puis sa nouvelle fonction afin de la changer !</p></b>
         <a href=""> Voir tout les comptes ! </a>
         <br><br>
-        <form action="" metthod="POST">
+        <form action="changerFonction.php" method="post">
            <label for="identifiant">Identifiant :</label> 
            <br>
-           <input class="rounded" type="text" name="id">
+           <input class="rounded" type="text" name="identifiant">
            <br><br>
            <label for="identifiant">Fonction :</label> 
            <br>
-           <input class="rounded" type="text" name="fct">
+           <input class="rounded" type="text" name="fonction">
            <br><br>
            <button class="btn border-black bg-secondary submit text-white"> Changer </button>
            <br><br>
