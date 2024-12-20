@@ -26,7 +26,7 @@
                             echo '<div class="dropdown-menu" aria-labelledby="dropdownMenu2">';
                                 echo '<a href="blog.php"<button class="dropdown-item" type="button">Blog</button></a>';
                                 echo '<a href="nosApplications.php"<button class="dropdown-item" type="button">Nos applications</button></a>';
-                                echo '<a href="gestion_compte.php"<button class="dropdown-item" type="button">Comptes</button></a>';
+                                echo '<a href="gestionCompte.php"<button class="dropdown-item" type="button">Comptes</button></a>';
                             echo '</div>';
                         echo '</div>';
                     }else{

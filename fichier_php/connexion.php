@@ -19,7 +19,7 @@
                             <h4 class="card-title">Connexion</h4>
                         </div>
                         <div class="card-body">
-                            <form action="se_connecter.php" method="POST">
+                            <form action="seConnecter.php" method="POST">
                                 <p>Identifiant ou adresse email:</p>
                                     <input class="col-12 border rounded" type="text" name="identification" placeholder="ID ou mail"/>
                                 <br></br>
