@@ -15,7 +15,7 @@ $validation = $result->execute();
 
 if ($validation) {
     echo "Changer de la fonction de l'utilisateur effectuer !";
-    echo '<meta http-equiv="refresh" content="100; URL=accueil.php">';   
+    echo '<meta http-equiv="refresh" content="3; URL=accueil.php">';   
 } else {
     echo "Erreure impossible de changer la fonction de l'utilisateur !";
     echo '<meta http-equiv="refresh" content="3; URL=gestionCompte.php">';
