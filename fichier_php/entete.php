@@ -25,13 +25,13 @@
                             echo '<button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Gestion </button>';
                             echo '<div class="dropdown-menu" aria-labelledby="dropdownMenu2">';
                                 echo '<a href="blog.php"<button class="dropdown-item" type="button">Blog</button></a>';
-                                echo '<a href="nos_applications.php"<button class="dropdown-item" type="button">Nos applications</button></a>';
+                                echo '<a href="nosApplications.php"<button class="dropdown-item" type="button">Nos applications</button></a>';
                                 echo '<a href="gestion_compte.php"<button class="dropdown-item" type="button">Comptes</button></a>';
                             echo '</div>';
                         echo '</div>';
                     }else{
                         echo '<li class="nav-item">';
-                            echo '<a class="nav-link active" href="nos_applications.php">Nos applications </a>';
+                            echo '<a class="nav-link active" href="nosApplications.php">Nos applications </a>';
                         echo '</li>';
                         echo '<li class="nav-item">';
                             echo '<a class="nav-link active" href="blog.php">Blog </a>';

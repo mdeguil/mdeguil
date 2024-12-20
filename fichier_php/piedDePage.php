@@ -13,7 +13,7 @@
             <img src="../img/instagram.png" alt="instagram" style="width:50px;">
         </div>
         <div class="col align-self-center">
-            <a href="contactez-nous.php"><button class="btn border-secondary text-secondary">Contactez nous</button></a>
+            <a href="contactezNous.php"><button class="btn border-secondary text-secondary">Contactez nous</button></a>
         </div>
     </div>
 </footer>  
