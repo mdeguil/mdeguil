@@ -2,7 +2,6 @@
     session_start();
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +13,7 @@
 </head>
 <body class="container">
     <header> <!-- Entête -->
-    <nav class="navbar navbar-expand-sm bg-success navbar-dark">
+        <nav class="navbar navbar-expand-sm bg-success navbar-dark">
             <div class="container-fluid">
                 <img src="../img/logo_af_2.jpeg" alt="Logo d'accueil" style="width:50px;" class="rounded-pill">
                 <?php echo $_SESSION["nom"]; ?>
@@ -99,75 +98,14 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only"></span>
     </a>
-</div><br>
-<div class="container mt-4">
-    <div class="card">
-      <div class="card-header text-center text-primary">
-        <strong>Aunis Applications</strong>
-      </div>
-      <div class="card-body">
-        <form id="downloadForm">
-          <div class="mb-3">
-          <select class="form-select" id="applicationSelect" size="5" aria-label="Applications disponibles">
-            <?php $applications = scandir('../aunis_applications'); $i = 0;
-                foreach ($applications as $application) { 
-                if ($application !== '.' && $application !== '..') { ?>
-                  <option value="<?= $application ?>"><?= $application ?> </option>
-                <?php
-                }
-            }
-            ?>
-            </select>
-          </div>
-            <?php
-                if (($_SESSION['fct'] === 'A')){
-                    echo '<div class="d-flex justify-content-end">';
-                    echo '<button type="button" class="btn btn-success" id="downloadButton">Télécharger</button>';
-                    echo '<a href="historique.php"<button class="btn btn-danger" type="button">Historique</button></a>';
-                    echo '</div>';
-                }
-            ?>
+</div>
 
-            <?php 
-                if (($_SESSION['fct'] === 'V') or ($_SESSION['fct'] === 'M')){
-                    echo '<div class="d-flex justify-content-end">';
-                    echo '<button type="button" class="btn btn-success" id="downloadButton">Télécharger</button>';
-                    echo '</div>';
-                }
-            ?> 
-        
-            <?php
-                if (($_SESSION['fct'] === NULL))
-                echo '<h4>veuillez vous connectez ou créer un compte pour télécharger les logiciels</h4>';
-            ?>
-        </form>
-      </div>
-    </div>
-  </div><br>
-
-  <script>
-    document.getElementById('downloadButton').addEventListener('click', function () {
-      // Récupérer l'application sélectionnée
-      const applicationSelect = document.getElementById('applicationSelect');
-      const selectedFile = applicationSelect.value;
-
-      // Créer un lien de téléchargement dynamique
-      const downloadLink = document.createElement('a');
-      // Chemin mis à jour pour correspondre à votre structure de dossier
-      downloadLink.href = `../aunis_applications/${selectedFile}`;
-      downloadLink.download = selectedFile;
-
-      // Déclencher le téléchargement
-      downloadLink.click();
-    });
-  </script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    </main>
-    <footer class="footer"> <!-- Pied de page -->
+</main>
+    <br><footer class="footer"> <!-- Pied de page -->
         <div class="row border border-success bg-success bg-opacity-50">
             <div class="col align-self-center">
                 <a class="nav-link disabled black">Copyright Aunis Freeware</a>
