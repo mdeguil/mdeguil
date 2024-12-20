@@ -14,8 +14,6 @@
 <body class="container">
     <?php include 'entete.php';?>
     <main class="container px-4"> <!-- Page central -->
-        <?php include 'carouselle.php';?>                      
-
 
         <?php
         $dsn = 'mysql:host=localhost;dbname=Site_Web_Aunis_Freeware';
