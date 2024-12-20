@@ -19,7 +19,7 @@
                             echo '<a class="nav-link active" href="nos_applications.php">Nos applications </a>';
                         echo '</li>';
                         echo '<li class="nav-item">';
-                            echo '<a class="nav-link active" href="">Blog </a>';
+                            echo '<a class="nav-link active" href="blog.php">Blog </a>';
                         echo '</li>';
                     }else{
                         echo '<div class="dropdown">';
