@@ -1,0 +1,4 @@
+Voici les mot de passe pour les comptes : 
+    - Admin = mdpadmin
+    - Membre = mdp Membre
+    - Visiteur = mdpvisiteur

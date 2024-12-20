@@ -42,7 +42,7 @@
                         ?>
 
                         <?php 
-                            if ((isset($_SESSION['fct']) === 'V') or (isset($_SESSION['fct']) === 'M')){
+                            if ((isset($_SESSION['fct'])) && (($_SESSION['fct'] === 'V') or ($_SESSION['fct'] === 'M'))){
                                 echo '<div class="d-flex justify-content-end">';
                                 echo '<button type="button" class="btn btn-success" id="downloadButton">Télécharger</button>';
                                 echo '</div>';
