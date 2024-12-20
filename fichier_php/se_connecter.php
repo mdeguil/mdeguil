@@ -17,10 +17,10 @@ $result->execute();
 
 $resultat_global= $result->fetch(PDO::FETCH_ASSOC);
 
-# Recupération des nom est prenom 
+# Recupération des nom est prenom pour tout les pages
 $_SESSION["nom"]= $resultat_global['nom'] . " " . $resultat_global['prenom'];
 
-# Recupération la fonction 
+# Recupération la fonction pour tout les pages
 $_SESSION["fct"]= $resultat_global['fonction'];
 
 # Recherche de compte existant
@@ -30,9 +30,6 @@ $res->bindParam(":identification", $identification);
 $res->bindParam(":mdp", $mdp);
 $res->execute();
 $resultat = $res->fetchColumn() > 0;
-
-# /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// #
-# Connexion au site en fonction des parametre 
 
 if ($resultat) {
     echo '<meta http-equiv="refresh" content="0; URL=accueil.php">';   

@@ -79,10 +79,10 @@
                         <div class="card-body">
                             <form action="se_connecter.php" method="POST">
                                 <p>Identifiant ou adresse email:</p>
-                                    <input class="col-12 border rounded" type="text" id="identification" name="identification" placeholder="ID ou mail"/>
+                                    <input class="col-12 border rounded" type="text" name="identification" placeholder="ID ou mail"/>
                                 <br></br>
                                 <p>Mot de passe</p>
-                                    <input class="col-12 border rounded" type="password" id="mdp" name="mdp" placeholder="Mot de passe"/>
+                                    <input class="col-12 border rounded" type="password" name="mdp" placeholder="Mot de passe"/>
                                 <br></br>
                                 <div class="text-center">
                                     <div class="btn-group" role="group" aria-label="Basic example">

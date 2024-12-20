@@ -2,7 +2,6 @@
 
     $dbh = new PDO('mysql:host=localhost;dbname=Site_Web_Aunis_Freeware', 'mysql', 'mysql');
 
-    // Recuperation de valuers / implémentation
     $identifiant = $_POST['identifiant'];
     $nom = $_POST['nom'];
     $prenom = $_POST['prenom'];
@@ -11,8 +10,6 @@
     $mdp = hash("sha256", $mdp);
     $fonction = "V";
 
-
-    // Création du compte
     $sql = $dbh-> prepare('INSERT INTO admin (identifiant, fonction, nom, prenom, email, mdp ) VALUES (:identifiant, :fonction, :nom, :prenom, :email, :mdp)');
 
     $sql->bindParam(":identifiant", $identifiant);
