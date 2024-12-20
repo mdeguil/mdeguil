@@ -4,7 +4,9 @@
             <img src="../img/logo_af_2.jpeg" alt="Logo d'accueil" style="width:50px;" class="rounded-pill">
             <div class="text-white">
                 <?php 
-                    echo $_SESSION["nom"]; 
+                    if (isset($_SESSION["nom"])) {
+                        echo $_SESSION["nom"];
+                    }
                 ?>
             </div>
             <!-- barre de navigation sur le site -->
@@ -18,14 +20,7 @@
                 </li>
 
                 <?php
-                    if( isset($_SESSION['fct']) !== 'A' ){
-                        echo '<li class="nav-item">';
-                            echo '<a class="nav-link active" href="nos_applications.php">Nos applications </a>';
-                        echo '</li>';
-                        echo '<li class="nav-item">';
-                            echo '<a class="nav-link active" href="blog.php">Blog </a>';
-                        echo '</li>';
-                    }else{
+                    if (isset($_SESSION['fct']) && $_SESSION['fct'] === 'A'){
                         echo '<div class="dropdown">';
                             echo '<button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Gestion </button>';
                             echo '<div class="dropdown-menu" aria-labelledby="dropdownMenu2">';
@@ -34,12 +29,19 @@
                                 echo '<a href="gestion_compte.php"<button class="dropdown-item" type="button">Comptes</button></a>';
                             echo '</div>';
                         echo '</div>';
+                    }else{
+                        echo '<li class="nav-item">';
+                            echo '<a class="nav-link active" href="nos_applications.php">Nos applications </a>';
+                        echo '</li>';
+                        echo '<li class="nav-item">';
+                            echo '<a class="nav-link active" href="blog.php">Blog </a>';
+                        echo '</li>';
                     }
                 ?>
                     
                 </li>
                 <?php
-                    if (isset($_SESSION['fct']) && isset($_SESSION['fct']) !== 'V' ){
+                    if (isset($_SESSION['fct']) && $_SESSION['fct'] !== 'V' ){
                         echo '<li class="nav-item"> ';
                             echo '<a class="nav-link active" href="page_contact.php">Contact </a>';
                         echo '</li>';
