@@ -19,12 +19,9 @@ CREATE TABLE `admin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 INSERT INTO `admin` (`identifiant`, `fonction`, `nom`, `prenom`, `email`, `mdp`) VALUES
-('admin',	'A',	'Deguil',	'Mateo',	'mateo.deguil@lycee-elie-vinet.org',	'1234'),
-('mbrillant',	'A',	'Brillant',	'Mathéo',	'matheo.brillant@lycee-elie-vinet.org',	'1234'),
-('mdeguil',	'V',	'Deguil',	'Mateo',	'deguil.mateo@gmail.com',	'1234'),
-('modo',	'M',	'modo',	'modo',	'modo@gmail.com',	'modo'),
-('test',	'V',	'test',	'test',	'test@email.test',	'9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08'),
-('testc',	'V',	'testc',	'testc',	'testc@gmail.com',	'c28a08a1a507d5c8ce1a24a6544850290d534e8da2ba92d04025a8dd199e3cd5');
+('Admin',	'A',	'Admin',	'exemple',	'Admin@gmail.com',	'f66218a3ce36c620f949e46c97bd66f27867c8cf2bf701762c83e21ca0ff87bf'),
+('Membre',	'M',	'Membre',	'exemple',	'Membre@gmail.com',	'4eb12bbf2e77831e2f7499929153c9d4150cf7f9a6f93544440132e10aa13bb9'),
+('Visiteur',	'V',	'Visiteur',	'exemple',	'Visiteur@gmail.com',	'6e0b97787db86d77c029c83b65c892a437f15ee8df3180032d5a968636dad0b6');
 
 DROP TABLE IF EXISTS `Contacte`;
 CREATE TABLE `Contacte` (
@@ -35,4 +32,4 @@ CREATE TABLE `Contacte` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 
--- 2024-12-20 07:35:14
+-- 2024-12-20 07:53:27

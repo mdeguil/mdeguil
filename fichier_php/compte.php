@@ -1,5 +1,34 @@
 <?php
 
+    function testMotDePasse($MotDePasse) {
+        $choix = "FALSE";
+        $longueur = strlen($MotDePasse);
+        $force = 0;
+        if ($longueur >= 8){
+            for ($i = 0; $i < $longueur; $i++){
+                $lettre = $MotDePasse[$i];
+                if ($lettre>='a' && $lettre<='z'){
+                    $minuscule = 1;                   
+                }
+                elseif ($lettre>='A' && $lettre <='Z'){
+                    $majuscule = 1;
+                }
+                elseif ($lettre>='0' && $lettre<='9'){
+                    $chiffre = 1;
+                }
+            }
+
+            $force = $minuscule + $majuscule + $chiffre;
+            if ($force < 3){
+                $choix = "FALSE";
+            }else{
+                $choix = "TRUE";
+            }
+        }
+
+        return $choix;
+    }
+
     $dbh = new PDO('mysql:host=localhost;dbname=Site_Web_Aunis_Freeware', 'mysql', 'mysql');
 
     $identifiant = $_POST['identifiant'];
@@ -16,7 +45,14 @@
     $res->execute();
     $resultat = $res->fetchColumn() > 0;
 
-    if ($mdp !== $confmdp){
+    $verif = testMotDePasse($mdp);
+    echo $verif;    
+
+
+    if ( $verif === "FALSE"){
+        echo "Le mot de passe n'est pas assez fort !! ";
+        echo '<meta http-equiv="refresh" content="6; URL=creation_de_compte.php">';
+    }elseif ($mdp !== $confmdp){
         echo "Les mots de passe ne correspondent pas !! ";
         echo '<meta http-equiv="refresh" content="5; URL=creation_de_compte.php">';
     }elseif ($resultat) {
