@@ -10,8 +10,17 @@
     $confmdp = $_POST['Confmdp'];
     $fonction = "V";
 
+    $res = $dbh-> prepare('SELECT COUNT(*) FROM admin WHERE email = :email or identifiant = :identifiant' );
+    $res->bindParam(":email", $email);
+    $res->bindParam(":identifiant", $identifiant);
+    $res->execute();
+    $resultat = $res->fetchColumn() > 0;
+
     if ($mdp !== $confmdp){
         echo "Les mots de passe ne correspondent pas !! ";
+        echo '<meta http-equiv="refresh" content="5; URL=creation_de_compte.php">';
+    }elseif ($resultat) {
+        echo "Email ou Identifiant deja existant !!";
         echo '<meta http-equiv="refresh" content="5; URL=creation_de_compte.php">';
     }else {
         $sql = $dbh-> prepare('INSERT INTO admin (identifiant, fonction, nom, prenom, email, mdp ) VALUES (:identifiant, :fonction, :nom, :prenom, :email, :mdp)');
