@@ -1,5 +1,4 @@
-<meta http-equiv="refresh" content="10; URL=accueil.php">
-<p>Redirection sur la page de d'Accueil !</p>
+<meta http-equiv="refresh" content="2; URL=accueil.php">
 
 <?php
 
@@ -18,7 +17,7 @@
     $sql->bindParam(":demande", $demande);
 
     if ($sql->execute()) {
-        echo "Nouveau enregistrement créé avec succès";
+        echo "Demmande envoyée !";
     } else {
         echo "Erreur";
     }
