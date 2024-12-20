@@ -32,7 +32,7 @@
 
         echo '<br><h1>Demandes des utilisateurs</h1><br>';
 
-        echo '<table border="2">';
+        echo '<table class="table">';
         echo '<tr> <th>nom</th> <th>prenom</th> <th>email</th> <th>demande<th> </tr>';
 
         while ($requete = $reponse->fetch(PDO::FETCH_ASSOC)) {

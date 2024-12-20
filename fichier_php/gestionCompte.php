@@ -16,7 +16,7 @@
         <h1 class="text-center">Gestion des comptes</h1>
         <br>
         <b><p>Entrer l'identifiant de la personne puis sa nouvelle fonction afin de la changer !</p></b>
-        <a href=""> Voir tout les comptes ! </a>
+        <a href="affichageCompte"> Voir tout les comptes ! </a>
         <br><br>
         <form action="changerFonction.php" method="post">
            <label for="identifiant">Identifiant :</label> 
