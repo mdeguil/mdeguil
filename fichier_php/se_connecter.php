@@ -6,6 +6,7 @@ $dbh = new PDO('mysql:host=localhost;dbname=Site_Web_Aunis_Freeware', 'mysql', '
 
 $identification = $_POST['identification'];
 $mdp = $_POST['mdp'];
+$mdp = hash("sha256", $mdp);
 
 
 
