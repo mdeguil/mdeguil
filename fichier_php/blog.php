@@ -12,7 +12,6 @@
 <body class="container">
     <?php include 'entete.php';?>  
     <main class="container px-4"> 
-        <?php include 'carouselle.php';?> 
         <br>
         <h1 class="text-center"> En construction </h1>   
         <br>
