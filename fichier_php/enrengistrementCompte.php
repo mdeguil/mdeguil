@@ -52,13 +52,13 @@
 
     if ( $verif === "FALSE"){
         echo "Le mot de passe n'est pas assez fort !! ";
-        echo '<meta http-equiv="refresh" content="5; URL=creation_de_compte.php">';
+        echo '<meta http-equiv="refresh" content="5; URL=creationDeCompte.php">';
     }elseif ($mdp !== $confmdp){
         echo "Les mots de passe ne correspondent pas !! ";
-        echo '<meta http-equiv="refresh" content="5; URL=creation_de_compte.php">';
+        echo '<meta http-equiv="refresh" content="5; URL=creationDeCompte.php">';
     }elseif ($resultat) {
         echo "Email ou Identifiant deja existant !!";
-        echo '<meta http-equiv="refresh" content="5; URL=creation_de_compte.php">';
+        echo '<meta http-equiv="refresh" content="5; URL=creationDeCompte.php">';
     }else {
         $sql = $dbh-> prepare('INSERT INTO admin (identifiant, fonction, nom, prenom, email, mdp ) VALUES (:identifiant, :fonction, :nom, :prenom, :email, :mdp)');
 
@@ -74,7 +74,7 @@
         if ($sql->execute()) {
             header("Location: accueil.php");
         } else {
-            header("Location: creation_de_compte.php");
+            header("Location: creationDeCompte.php");
         };
     }
 ?>

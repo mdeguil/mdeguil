@@ -2,7 +2,7 @@
     session_start();
 ?>
 
-<!DOCTYPE html><
+<!DOCTYPE html>
 <html lang="fr"></html>
 <head>
     <meta charset="UTF-8">
